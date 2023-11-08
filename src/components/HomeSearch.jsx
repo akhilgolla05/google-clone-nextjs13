@@ -56,7 +56,8 @@ export default function HomeSearch() {
 
       <div className="mt-8 flex flex-col space-y-2 sm:space-y-0 sm:space-x-4 justify-center sm:flex-row">
         <button className="btn " onClick={handleSubmit}>Google Search</button>
-        <button onClick={randomSearch} className="btn">
+        <button disabled={randomSearchLoading} onClick={randomSearch} 
+        className="btn flex items-center justify-center disabled:opacity-80">
             {randomSearchLoading ? (
                 <img src="spinner.svg" alt="loading..." className="h-6 text-center"/>)
                 :(
